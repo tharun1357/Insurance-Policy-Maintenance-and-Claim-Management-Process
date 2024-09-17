@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<%@ Register TagPrefix="uc3" TagName="logo" Src="logo.ascx" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <style type="text/css">
+        .style1
+        {
+            width: 60%;
+            height: 68px;
+        }
+        .style2
+        {
+            height: 68px;
+        }
+    </style>
+  </head>
+<body>
+    <form id="form1" runat="server">
+    
+        <table>
+            <tr>
+                <td  colspan ="2" valign="top">
+               <uc3:logo ID="logo2" runat ="server" /></td>
+                              </td>
+            </tr>
+            <tr>
+            <td bgcolor="Fuchsia">
+                   <table align="right" border=1 frame="border" bgcolor="#33CCFF">
+                    <tr>
+                    <td><asp:LinkButton ID="LinkButton1" runat="server" Text="Adminstrator" 
+                            onclick="LinkButton1_Click"/></td>
+                    <td><asp:LinkButton ID="LinkButton3" runat="server" Text=" Agent" 
+                            onclick="LinkButton3_Click"/></td>
+                    <td><asp:LinkButton ID="LinkButton4" runat="server" Text=" Customer" 
+                            onclick="LinkButton4_Click"/></td>
+                    <td><asp:LinkButton ID="LinkButton5" runat="server" Text=" New Agent" 
+                            onclick="LinkButton5_Click"/></td>
+                    <td><asp:LinkButton ID="LinkButton6" runat="server" Text=" New Customer" 
+                            onclick="LinkButton6_Click"/></td>
+                    </tr>
+                    </table></td>
+                </tr>
+                  <tr>
+                  <td>
+                 <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder></td>
+    </tr> 
+        </table>
+    
+    </form>
+</body>
+</html>

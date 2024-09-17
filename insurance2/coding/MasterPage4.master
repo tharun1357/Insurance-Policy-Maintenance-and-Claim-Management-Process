@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage4.master.cs" Inherits="MasterPage4" %>
+<%@ Register TagPrefix="uc3" TagName="logo" Src="logo.ascx" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    
+    <style type="text/css">
+        .style1
+        {
+            height: 378px;
+        }
+        .style2
+        {
+            height: 378px;
+            width: 125px;
+        }
+    </style>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+      <table> <tr>
+                <td colspan = "2" valign="top">
+                    <uc3:logo ID="uc3" runat="server" />
+                </td>
+            </tr>
+                        <tr>
+                <td colspan="2" align ="right" bgcolor="#FF33CC" >
+                <table><tr>
+                    <td bgcolor="#FF33CC"><asp:HyperLink ID="lll12" Text="Home" runat ="server" 
+                            NavigateUrl="~/homepage.aspx" BackColor="#FFCC99"/></td>
+                    <td><asp:HyperLink ID="LinkButton111" Text=" LogOut" runat ="server" 
+                            NavigateUrl="~/Customerlogin.aspx" BackColor="#FFCC66"
+                            /></td>
+                </tr></table>
+                </td>    
+            </tr>
+            <tr>
+            <td bgcolor="#CCCCFF" class="style2" >
+            <table>
+            <tr><td><asp:LinkButton ID="lnkmyinfo1" Text="My Info" runat ="server" 
+                    onclick="lnkmyinfo1_Click" /></td></tr>
+            <tr><td>
+                <asp:LinkButton ID="lnkcmpdetails" Text="Company Details" runat ="server" 
+                    ForeColor="#CC3300" Visible="False" onclick="lnkcmpdetails_Click" /></td></tr>
+            <tr><td>
+                <asp:LinkButton ID="lnkprmdetails" Text="Premium Details" runat ="server" 
+                    ForeColor="#CC3300" Visible="False" onclick="lnkprmdetails_Click" /></td></tr>
+            <tr><td><asp:LinkButton ID="lnkCustregdetails" Text="Customer Registration Details" 
+                    runat ="server" ForeColor="#CC3300" Visible="False" 
+                    onclick="lnkCustregdetails_Click" /></td></tr>
+            <tr><td>
+                <asp:LinkButton ID="lnkPasswordchangedetails" 
+                    Text="Password Change Details" runat ="server" ForeColor="#CC3300" 
+                    Visible="False" onclick="lnkPasswordchangedetails_Click" /></td></tr>
+            <tr><td><asp:LinkButton ID="lnkpolicydetails" Text="Policy Details" runat ="server" 
+                    onclick="lnkpolicydetails_Click" /></td></tr>
+            <tr><td><asp:LinkButton ID="lnkPolicyclaimdetails" Text="Policy Claim Details" 
+                    runat ="server" onclick="lnkPolicyclaimdetails_Click" /></td></tr>
+            <tr><td><asp:LinkButton ID="lnkPasswordInfo" Text="Change Password" runat ="server" 
+                    onclick="lnkPasswordInfo_Click" /></td></tr>
+            </table>
+            </td>
+            <td width="500" class="style1"><asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+            </td>
+            </tr>
+            
+            </table>
+       
+   
+    </form>
+</body>
+</html>

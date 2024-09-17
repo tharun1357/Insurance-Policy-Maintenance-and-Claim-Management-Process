@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+<%@ Register TagPrefix="uc3" TagName="logo" Src="logo.ascx" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+          
+    <style type="text/css">
+        .style1
+        {
+            width: 726px;
+        }
+        .style2
+        {}
+        .style3
+        {
+            width: 566px;
+            height: 307px;
+        }
+        .style4
+        {
+            height: 21px;
+        }
+        .style5
+        {
+            height: 307px;
+        }
+    </style>
+          
+    </head>
+<body>
+    <form id="form1" runat="server">
+    
+   
+        <table >
+            <tr>
+                <td colspan= "2" valign="top">
+                    <uc3:logo ID="uc3" runat="server" /></td>
+            </tr>
+                        <tr>
+                <td  colspan="2" align="right" bgcolor="#CC0099">
+                    <asp:LinkButton ID="lnkhome" runat="server" Text="Home" onclick="lnkhome_Click" 
+                        BackColor="#FFFFCC" /></td>
+            </tr>
+            <tr>
+                <td class="style5" bgcolor="#66FFFF">
+                    <table>
+                    <tr>
+                    <td><asp:LinkButton ID="lnkcompanyreg" Text="Company Registration" runat="server" 
+                            onclick="lnkcompanyreg_Click" /></td></tr>
+                    <tr>
+            <td>
+                <asp:LinkButton ID="lnkpolicytypedetails" Text="Policy Type Details" 
+                    runat="server" onclick="lnkpolicytypedetails_Click" /></td>
+        </tr>
+        <tr>
+            <td>
+                <asp:LinkButton ID="lnkpolicyreg" Text="Policy Registration" runat="server" 
+                    onclick="lnkpolicyreg_Click" /></td>
+        </tr>
+        <tr>
+            <td>
+               <asp:LinkButton ID="lnkaccptdagntdetails" Text="Accepted Agent Details" 
+                    runat="server" onclick="lnkaccptdagntdetails_Click" /></td>
+        </tr>
+        <tr>
+            <td>
+                <asp:LinkButton ID="lnkagentdetails" Text="Agent Details" runat="server" 
+                    onclick="lnkagentdetails_Click" /></td>
+        </tr>
+        <tr>
+            <td class="style4">
+                <asp:LinkButton ID="lnkclaimstsdetails" Text="Claim Status Details" 
+                    runat="server" onclick="lnkclaimstsdetails_Click" /></td>
+        </tr></table></td>
+        <td class="style3"><asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder></td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+</html>
